@@ -11,9 +11,12 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
+    print("Predict function called")
     # Get the file and the prediction period from the POST request
     f = request.files['datafile']
     predict_period = int(request.form['predict_period'])
+    print(f"Received file: {f.filename}")
+    print(f"Prediction period: {predict_period}")
     
     # Read the CSV file into a DataFrame
     # Assuming the CSV has a DateTime index and one column of values
