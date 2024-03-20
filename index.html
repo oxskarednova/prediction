@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Series Prediction</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Time Series Data Prediction</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" name="datafile" required>
+            <input type="number" name="predict_period" placeholder="Prediction period" required>
+            <button type="button" id="predict-btn">Predict and Visualize</button>
+        </form>
+        <canvas id="plot"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
